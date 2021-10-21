@@ -11,11 +11,11 @@ interface prop {
   live?: string;
   img?: string;
 }
-function ProjectItem({ title, desc, git, nb, live }: prop) {
+function ProjectItem({ title, desc, git, nb, live, img }: prop) {
   return (
     <Card>
       <Row gutter={8}>
-        <Col span={20}>
+        <Col md={20}>
           <Title level={3}>{title}</Title>
           <Paragraph>{desc}</Paragraph>
           <Divider />
@@ -35,11 +35,13 @@ function ProjectItem({ title, desc, git, nb, live }: prop) {
             </a>
           ) : null}
         </Col>
-        <Col span={4} style={{ textAlign: "center" }}>
+        <Col md={4} style={{ textAlign: "center" }}>
           <Image
             width="150px"
+            height="150px"
             style={{ objectFit: "cover" }}
-            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+            alt="Project image"
+            src={img}
           />
         </Col>
       </Row>

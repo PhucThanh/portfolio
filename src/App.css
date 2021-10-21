@@ -11,3 +11,13 @@
   border-width: 2px !important;
   margin-bottom: 10px !important;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #cccccc;
+}
+::-webkit-scrollbar-thumb {
+  background: purple;
+  border-radius: 25px;
+}
