@@ -19,7 +19,21 @@ function ProjectItem({ title, desc, git, nb, live }: prop) {
           <Title level={3}>{title}</Title>
           <Paragraph>{desc}</Paragraph>
           <Divider />
-          <a>{git}</a> <a>{nb}</a> <a>{live}</a>
+          {git ? (
+            <a target="_blank" href={git}>
+              Github{" "}
+            </a>
+          ) : null}
+          {nb ? (
+            <a target="_blank" href={nb}>
+              Notebook{" "}
+            </a>
+          ) : null}
+          {live ? (
+            <a target="_blank" href={live}>
+              Live
+            </a>
+          ) : null}
         </Col>
         <Col span={4} style={{ textAlign: "center" }}>
           <Image
