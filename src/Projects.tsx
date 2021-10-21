@@ -8,7 +8,7 @@ function Projects() {
       title: "Detect Vietnamese's food with YoloV4",
       desc: "We collected and labeled over 2000 thousand images of Vietnamese food then train them with the YoloV4 model. As a result, our mean accuracy on the test set is 82.53 % ",
       git: "https://github.com/PhucThanh/portfolio/blob/master/projects/%5BDEMO%5D%20Yolov4Food.ipynb",
-      img: "/images/goicuon.PNG",
+      img: "/images/goicuon.png",
       tags: [pTag.Deep, pTag.Machine, pTag.Uni],
     },
     {
