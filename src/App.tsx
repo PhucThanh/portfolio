@@ -1,54 +1,56 @@
-import React from "react";
-import "antd/dist/antd.css";
-import "./App.css";
-
 import { Layout, Menu, Typography } from "antd";
-import { Link, animateScroll as scroll, scroller } from "react-scroll";
-import TimeLine from "./TimeLine";
+import "antd/dist/antd.css";
+import React from "react";
+import { scroller } from "react-scroll";
+import "./App.css";
+import NavBar from "./NavBar";
 import Projects from "./Projects";
+import TimeLine from "./TimeLine";
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Title, Paragraph, Text } = Typography;
 function App() {
   const handleClick = (e: any) => {
-    scroller.scrollTo(e.key, { duration: 1000, delay: 50, smooth: true });
+    if (e.key[5] != ":")
+      scroller.scrollTo(e.key, { duration: 1000, delay: 50, smooth: true });
+    else window.open(e.key);
   };
   return (
     <>
       <Layout>
         <Header style={{ backgroundColor: "white" }}>
-          <Menu onClick={(e) => handleClick(e)} mode="horizontal">
-            <Menu.Item key="intro">Who am I?</Menu.Item>
-            <Menu.Item key="projects">Projects</Menu.Item>
-            <Menu.Item key="timeline">Timeline</Menu.Item>
-            <Menu.Item key="blog">Blogs</Menu.Item>
-          </Menu>
+          <NavBar handleClick={handleClick} />
         </Header>
         <img
           style={{ maxHeight: "300px", objectFit: "cover" }}
           src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/facebook-cover.jpg"
         />
         <Content style={{ padding: "25px 50px", backgroundColor: "white" }}>
-          <Title type="danger"> Site is work in progess...</Title>
+          <Title type="danger"> I am still building this site!...</Title>
           <section id="intro">
             <Title>Who am I?</Title>
             <Paragraph>
-              In the process of internal desktop applications development, many
-              different design specs and implementations would be involved,
-              which might cause designers and developers difficulties and
-              duplication and reduce the efficiency of development.
-            </Paragraph>
-            <Paragraph>
-              After massive project practice and summaries, Ant Design, a design
-              language for background applications, is refined by Ant UED Team,
-              which aims to{" "}
-              <Text strong>
-                uniform the user interface specs for internal background
-                projects, lower the unnecessary cost of design differences and
-                implementation and liberate the resources of design and
-                front-end development
-              </Text>
-              .
+              I am a developer who is very enthusiastic about AI. This is my
+              current portfolio to showcase my web development and machine
+              learning projects. Do web development and machine learning go well
+              together? I think so. I learn a bit from both. Now I am focusing
+              on finding a job in Machine learning/ AI / Data Science. Please
+              feel free to contact me via my Facebook or LinkedIn at the top
+              right corner of this page. ​ Meanwhile, why don't you have a look
+              at some of my projects? I hope you will like it!
+              <Paragraph>
+                <Text strong>
+                  Btw, here is a random list of things that I enjoy:
+                </Text>
+              </Paragraph>
+              <ul>
+                <li>Reading.</li>
+                <li>Crypto 4 fun.</li>
+                <li>Walking at the park.</li>
+                <li>Road trip.</li>
+                <li>Coffee with friends.</li>
+                <li>Music.</li>
+              </ul>
             </Paragraph>
           </section>
           <section id="projects" className="section_project">

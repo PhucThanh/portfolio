@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography } from "antd";
+import { Typography, Tag } from "antd";
 import { Row, Col, Card, Image, Divider } from "antd";
-
+import { pTag, getColor } from "./tags";
 const { Title, Paragraph, Text } = Typography;
 interface prop {
   title: string;
@@ -9,15 +9,20 @@ interface prop {
   git?: string;
   nb?: string;
   live?: string;
-  img?: string;
+  img?: any;
+  tags?: pTag[];
 }
-function ProjectItem({ title, desc, git, nb, live, img }: prop) {
+function ProjectItem({ title, desc, git, nb, live, img, tags }: prop) {
+  if (tags) console.log(tags[0]);
   return (
     <Card>
       <Row gutter={8}>
-        <Col md={20}>
+        <Col md={19}>
           <Title level={3}>{title}</Title>
           <Paragraph>{desc}</Paragraph>
+          {tags?.map((tag) => {
+            return <Tag color={getColor(tag)}>#{tag}</Tag>;
+          })}
           <Divider />
           {git ? (
             <a target="_blank" href={git}>
@@ -35,13 +40,11 @@ function ProjectItem({ title, desc, git, nb, live, img }: prop) {
             </a>
           ) : null}
         </Col>
-        <Col md={4} style={{ textAlign: "center" }}>
+        <Col md={5} style={{ textAlign: "center" }}>
           <Image
-            width="150px"
-            height="150px"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", maxWidth: "180px", aspectRatio: "1" }}
             alt="Project image"
-            src={img}
+            src={process.env.PUBLIC_URL + img}
           />
         </Col>
       </Row>
