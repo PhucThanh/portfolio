@@ -1,0 +1,13 @@
+.ant-timeline-item-content {
+  font-size: 16px;
+}
+.ant-timeline-item-content:hover {
+  font-size: 18px;
+}
+.ant-layout-content section {
+  margin-top: 20px;
+}
+.ant-card-bordered {
+  border-width: 2px !important;
+  margin-bottom: 10px !important;
+}
