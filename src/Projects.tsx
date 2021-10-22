@@ -30,7 +30,7 @@ function Projects() {
     {
       title: "Netflix data analysis and recommendation system",
       desc: "Analyze the Netflix movie dataset to see its trend and insight. After that, I build a simple recommendation system based on the KNN algorithm. As a result, we can recommend the next movie to the audience which we think they might want to watch!",
-      nb: "https://nbviewer.org/github/PhucThanh/portfolio/blob/master/projects/Netflix%20Data%20Analysis.ipynb",
+      nb: "https://kokes.github.io/nbviewer.js/viewer.html#aHR0cHM6Ly9naXRodWIuY29tL1BodWNUaGFuaC9wb3J0Zm9saW8vYmxvYi9tYXN0ZXIvcHJvamVjdHMvTmV0ZmxpeCUyMERhdGElMjBBbmFseXNpcy5pcHluYg==",
       img: "/images/netflix.png",
       tags: [pTag.data, pTag.Machine, pTag.Uni],
     },
