@@ -30,7 +30,7 @@ function Projects() {
     {
       title: "Netflix data analysis and recommendation system",
       desc: "Analyze the Netflix movie dataset to see its trend and insight. After that, I build a simple recommendation system based on the KNN algorithm. As a result, we can recommend the next movie to the audience which we think they might want to watch!",
-      nb: "https://kokes.github.io/nbviewer.js/viewer.html#aHR0cHM6Ly9naXRodWIuY29tL1BodWNUaGFuaC9wb3J0Zm9saW8vYmxvYi9tYXN0ZXIvcHJvamVjdHMvTmV0ZmxpeCUyMERhdGElMjBBbmFseXNpcy5pcHluYg==",
+      nb: "https://nbviewer.org/github/PhucThanh/portfolio/blob/master/projects/Netflix%20Data%20Analysis.ipynb",
       img: "/images/netflix.png",
       tags: [pTag.data, pTag.Machine, pTag.Uni],
     },
@@ -40,6 +40,15 @@ function Projects() {
       live: "https://covid19-tracker-ef4a3.web.app/",
       git: "https://github.com/PhucThanh/Covid19-dashboard",
       img: `/images/covidmap.PNG`,
+      tags: [pTag.Per, pTag.Web],
+    },
+    {
+      title: '"Đánh giá năng lực" Mock test Website ✍️',
+      desc: 'A website to help student take the "Đánh giá năng lực" mock test. \
+      The organizer can post the mock test and students can take it. \
+      They can also compare their score to other students. The website attracted hundred of real users in its lifetime.',
+      live: "https://dgnl.herokuapp.com/",
+      img: `/images/dhqg.PNG`,
       tags: [pTag.Per, pTag.Web],
     },
   ];
